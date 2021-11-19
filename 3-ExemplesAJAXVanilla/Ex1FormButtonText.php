@@ -10,5 +10,6 @@
     <form action="Ex1FormButtonTextTraitement.php" method="POST">
         <button id="btn_obtenir">Obtenir message</button>
     </form>
+    <script src="./Ex1.js"></script>
 </body>
 </html>
