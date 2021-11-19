@@ -8,7 +8,7 @@
 </head>
 <body>
 <?php
-    echo "Bonjour ".$_GET['nom'];
+    echo "Bonjour ".$_POST['nom'];
 ?>
 </body>
 </html>

@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="./exemple1FormGetTraitement.php" method="GET">
+    <form action="./exemple1FormGetTraitement.php" method="POST">
         Nom<input type="text" name="nom">
         <input type="submit" value="Envoyer">
     </form>
