@@ -8,10 +8,13 @@
 </head>
 <body>
 <!-- Ce site transforme une phrase en majuscules -->
-<form>
+
+<!-- Notez que le formulaire doit avoir un id pour pouvoir être accédé depuis JS  -->
+<form id="formulaireEnvoi"> 
     <input type="text" name="txt_phrase">
     <button id="envoyer">Envoyer</button>
 </form>
+<div id="div_phrase">Ici il y aura la phrase en majuscules</div>
 <script src="./Ex2.js"></script>
 </body>
 </html>
