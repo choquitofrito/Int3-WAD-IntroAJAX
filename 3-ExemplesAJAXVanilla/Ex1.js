@@ -1,5 +1,27 @@
-document.getElementById("btn_obtenir").addEventListener ("click", (event) => {
+document.getElementById("btn_obtenir").addEventListener("click", (event) => {
     event.preventDefault(); // dans ce cas, arreter le submit
-    console.log ("click sur obtenir");
+
+    // créer l'objet xhr
+    let xhr = new XMLHttpRequest();
+    console.log(xhr.readyState);
+
+    // définir l'action à lancer à chaque changement de readyState
+    xhr.onreadystatechange = function () {
+        console.log(xhr.readyState);
+        if (xhr.readyState == 4) { // état de chargement de la reponse du serveur, fini
+            if (xhr.status == 200) { // reponse du serveur, succés
+                console.log(xhr.responseText);
+                document.getElementById("div_message").innerHTML = xhr.responseText;
+            }
+            else if (xhr.status == 404){
+                window.location.href = "./404.html";
+            }
+        }
+    };
+
+    // créer et lancer la requête au serveur
+    xhr.open('GET', 'Ex1FormButtonTextTraitement.php');
+    // xhr.open('GET', 'Ex1FormButtonTextTraitementooo.php'); // test 404
+    xhr.send(null);
 }
 );
